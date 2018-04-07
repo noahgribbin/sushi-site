@@ -1,0 +1,13 @@
+.menu-selector{
+  text-align: center;
+  ul{
+    li{
+      display: inline-block;
+      padding: 0 1rem 0 1rem
+    }
+  }
+}
+.active{
+  border-bottom: 2px solid black
+
+}

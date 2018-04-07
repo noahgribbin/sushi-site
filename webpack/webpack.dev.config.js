@@ -1,7 +1,10 @@
 const HtmlWebpackPlugin =  require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path')
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractSass = new ExtractTextPlugin({
+    filename: "main.css"
+});
 const config = {
   entry:`${__dirname}/../index.js`,
   output: {
@@ -24,14 +27,26 @@ const config = {
         }
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.(png|jpg)$/,
         use: {
-          loader: 'sass-loader'
+          loader: 'file-loader'
         }
+      },
+      {
+        test: /\.(css|scss)$/,
+        use: extractSass.extract({
+        fallback: "style-loader",
+        use: [
+          "css-loader",
+          "sass-loader",
+
+        ]
+        })
       }
     ]
   },
   plugins: [
+    extractSass,
     new HtmlWebpackPlugin({template: './index.html'})
   ]
 };
