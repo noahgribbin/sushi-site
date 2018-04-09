@@ -26,7 +26,7 @@ class Menu extends React.Component {
     })
     return(
       <section className="menu-container">
-        <MenuSelector menu={menu} hoistState={this.hoistState}/>
+        <MenuSelector active={this.state.active} menu={menu} hoistState={this.hoistState}/>
         {menus}
       </section>
     )

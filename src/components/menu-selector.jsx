@@ -19,16 +19,17 @@ class MenuSelector extends React.Component {
   }
 
   render(){
-    // console.log(this.state, '}|}|}|}|}');
+    console.log(this.props.active, '}|}|}|}|}');
     var state = this.state
     var items = this.props.menu.map((item, i) => {
-      console.log(this, '|||||||');
+      console.log('popopopopopop', item)
+      console.log(this.props.active, '{}{}{}{}{}{}{}{}{}');
       return(
         <li id={item.categoryId}
             onClick={this.onClick}
             key={i}
-            className={'menu-selector-item '
-                        // + (state.active === {item.categoryId} ? "active": null)
+            className={`menu-selector-item
+                         ${this.props.active === item.categoryId ? "active": null}`
                       }
             >
             {item.categoryName}
