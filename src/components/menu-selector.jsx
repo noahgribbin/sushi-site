@@ -5,39 +5,41 @@ class MenuSelector extends React.Component {
     super(props)
     this.onClick = this.onClick.bind(this)
     this.state={
-      avtive:null,
+      avtive:'traditional-rolls',
     }
   }
 
   onClick(e){
     var id = e.target.getAttribute('id')
-    console.log(id);
     this.setState({
       active: id
+    }, () => {
+      this.props.hoistState(this.state.active)
     })
   }
 
   render(){
+    // console.log(this.state, '}|}|}|}|}');
+    var state = this.state
+    var items = this.props.menu.map((item, i) => {
+      console.log(this, '|||||||');
+      return(
+        <li id={item.categoryId}
+            onClick={this.onClick}
+            key={i}
+            className={'menu-selector-item '
+                        // + (state.active === {item.categoryId} ? "active": null)
+                      }
+            >
+            {item.categoryName}
+        </li>
+      )
+    })
     return(
       <section className="menu-selector">
         <ul>
-          <li id="sushi-roll"
-              onClick={this.onClick}
-              className={'menu-selector-item ' + (this.state.active === 'sushi-roll' ? "active": null)}>
-              Sushi Rolls
-          </li>
-          <li id="appetizer-&-salad"
-              onClick={this.onClick}
-              className={'menu-selector-item ' + (this.state.active === 'appetizer-&-salad' ? "active": null)}>
-              Appetizer & Salad
-          </li>
-          <li id="nigiri"
-            onClick={this.onClick}
-            className={'menu-selector-item ' + (this.state.active === 'nigiri' ? "active": null)}>
-            Nigiri
-          </li>
+          {items}
         </ul>
-        <span>{this.state.active}</span>
       </section>
     )
   }

@@ -1,0 +1,671 @@
+[
+   {
+      "categoryName":"Appetizer",
+      "categoryId":"appetizer-&-salad",
+      "dishes":[
+         {
+            "name":"Pork Gyoza",
+            "description":"Pork & Vegetables, potstickers.",
+            "price":"5.45"
+         },
+         {
+            "name":"Vegetable Gyoza",
+            "description":"Vegetable potstickers.",
+            "price":"5.95"
+         },
+         {
+            "name":"Edamame",
+            "description":"Boiled Soybeans.",
+            "price":"3.00"
+         },
+         {
+            "name":"Agedashi Tofu",
+            "description":"Deep fried Tofu.",
+            "price":"6.45"
+         },
+         {
+            "name":"Vegetable Tempura",
+            "description":"Deep fried sweet potato, carrot, onion, broccoli, mushroom, zucchini.",
+            "price":"6.50"
+         },
+         {
+            "name":"Shrimp Tempura",
+            "description":"Deep fried shrimp & vegetable tempura.",
+            "price":"6.95"
+         },
+         {
+            "name":"Green tempura",
+            "description":"Deep fried avocado, green onion, asparagus, zucchini, broccoli.",
+            "price":"7.95"
+         },
+         {
+            "name":"Shumai",
+            "description":"Steamed seafood Shumai.",
+            "price":"5.95"
+         }
+      ]
+   },
+   {
+      "categoryName":"Salad",
+      "categoryId":"salad",
+      "dishes":[
+         {
+            "name":"Seaweed Salad",
+            "description":"Assorted seaweed salad.",
+            "price":"4.95"
+         },
+         {
+            "name":"Cucumber Salad",
+            "description":null,
+            "price":"4.95"
+         },
+         {
+            "name":"Mixed Sashimi Salad ",
+            "description":null,
+            "price":"13.95"
+         },
+         {
+            "name":"Tuna Sashimi Salad ",
+            "description":null,
+            "price":"13.95"
+         },
+         {
+            "name":"Octopus Salad ",
+            "description":null,
+            "price":"7.50"
+         },
+         {
+            "name":"Sunomono Salad ",
+            "description":"Cucumber, seaweed salad and choice of octopus or shrimp.",
+            "price":"8.95"
+         },
+         {
+            "name":"Seared Albacore tuna with Crispy Onion ",
+            "description":null,
+            "price":"11.95"
+         }
+      ]
+   },
+   {
+      "categoryName":"Sides",
+      "categoryId":"sides",
+      "dishes":[
+         {
+            "name":"Rice",
+            "description":null,
+            "price":"2.00"
+         },
+         {
+            "name":"Sushi Rice",
+            "description":null,
+            "price":"3.00"
+         },
+         {
+            "name":"Miso",
+            "description":null,
+            "price":"1.50"
+         },
+         {
+            "name":"Side Salad",
+            "description":null,
+            "price":"1.50"
+         }
+      ]
+   },
+   {
+      "categoryName":"Sushi Bar",
+      "categoryId":"sushi-bar",
+      "dishes":[
+         {
+            "name":"Sockeye Salmon",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Spanish Mackerel (Aji)",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Real Crab (Kani)",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Geoduck (Sea Urchin)",
+            "description":null,
+            "price":"7.50"
+         },
+         {
+            "name":"Surf Clam",
+            "description":null,
+            "price":"4.00"
+         },
+         {
+            "name":"Tamago (Egg Omelet)",
+            "description":null,
+            "price":"2.95"
+         },
+         {
+            "name":"Tuna (Maguro)",
+            "description":null,
+            "price":"5.50"
+         },
+         {
+            "name":"Albacore Tuna (Shiromaguro)",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Mackerel (Saba)",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Scallop (Hotate)",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Squid (Ika)",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Shrimp (Ebi)",
+            "description":null,
+            "price":"4.00"
+         },
+         {
+            "name":"Yellowtail (Hamachi)",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Smoked Salmon",
+            "description":null,
+            "price":"4.50"
+         },
+         {
+            "name":"Sweet Shrimp (Amaebi)",
+            "description":null,
+            "price":"6.50"
+         },
+         {
+            "name":"Fresh Water Eel (Unagi)",
+            "description":null,
+            "price":"5.00"
+         },
+         {
+            "name":"Octopus (Tako)",
+            "description":null,
+            "price":"4.50"
+         },
+         {
+            "name":"Tilapia",
+            "description":null,
+            "price":"4.50"
+         },
+         {
+            "name":"Salmon (Sake)",
+            "description":null,
+            "price":"4.50"
+         },
+         {
+            "name":"Ikura (Salmon Roe)",
+            "description":null,
+            "price":"5.50"
+         },
+         {
+            "name":"Masago (Smelt Roe)",
+            "description":null,
+            "price":"4.50"
+         }
+      ]
+   },
+   {
+      "categoryName":"Traditional Rolls",
+      "categoryId":"traditional-rolls",
+      "dishes":[
+         {
+            "name":"Tekka",
+            "description":"Fresh Tuna",
+            "price":"6.95"
+         },
+         {
+            "name":"Sake",
+            "description":"Fresh Salmon",
+            "price":"5.50"
+         },
+         {
+            "name":"Negi Hamachi",
+            "description":"Yellowtail, Green onion.",
+            "price":"6.25"
+         },
+         {
+            "name":"Futo",
+            "description":"Egg omelet, shrimp, shitake mushroom, spinach, yellow pickle.",
+            "price":"6.95"
+         },
+         {
+            "name":"California",
+            "description":"Avocado, cucumber, crab meat.",
+            "price":"4.95"
+         },
+         {
+            "name":"Philadelphia",
+            "description":"Avocado, smoked salmon, and cream cheese.",
+            "price":"6.95"
+         },
+         {
+            "name":"Spicy Tuna",
+            "description":"Cucumber and spiced tuna.",
+            "price":"6.95"
+         },
+         {
+            "name":"Spicy Salmon",
+            "description":"Cucumber and spiced salmon.",
+            "price":"5.95"
+         },
+         {
+            "name":"Spicy Scallop",
+            "description":"Cucumber and spiced scallop.",
+            "price":"6.95"
+         },
+         {
+            "name":"Spicy Yellowtail",
+            "description":"Cucumber and spiced yellowtail.",
+            "price":"6.25"
+         },
+         {
+            "name":"Eel and Avocado",
+            "description":null,
+            "price":"6.50"
+         },
+         {
+            "name":"Salmon and Avocado",
+            "description":null,
+            "price":"7.95"
+         },
+         {
+            "name":"Salmon Skin",
+            "description":null,
+            "price":"5.95"
+         }
+      ]
+   },
+   {
+      "categoryName":"Special Rolls",
+      "categoryId":"special-rolls",
+      "dishes":[
+         {
+            "name":"Arizona Roll",
+            "description":"Seared salmon layer on spicy tuna..",
+            "price":"13.95"
+         },
+         {
+            "name":"Olive Roll",
+            "description":"Seared tuna, salmon, albacore tuna, and yellowtail on spicy tuna.",
+            "price":"14.95"
+         },
+         {
+            "name":"Spicy Dragon Roll",
+            "description":"Eel layer on spicy tuna and covered with tempura crunch.",
+            "price":"12.95"
+         },
+         {
+            "name":"Mazey Roll",
+            "description":"Cucumber, crab meat, shrimp tempura, spicy tuna, avocado layers, finished with tempura crunch and Eel sauce. Very Tasty!",
+            "price":"14.95"
+         },
+         {
+            "name":"Magic Roll",
+            "description":"Cucumber, shrimp tempura, eel, cream cheese, tuna, and avocado on top. Great Combination!",
+            "price":"13.95"
+         },
+         {
+            "name":"Space Needle Roll",
+            "description":"Spicy tuna and shrimp tempura and covered with albacore tuna and deep-fried red onion.",
+            "price":"13.95"
+         },
+         {
+            "name":"Red Dragon",
+            "description":"Fresh tuna, salmon, and lemon slices top of the eel, avocado, crab meat roll, and our sweet house sauce.",
+            "price":"11.95"
+         },
+         {
+            "name":"Alaskan",
+            "description":"Fresh salmon, crab meat, avocado, cucumber, spicy sauce, and lettuce make you happy.",
+            "price":"7.95"
+         },
+         {
+            "name":"Red Snake",
+            "description":"Tuna and avocado layer on the spicy tuna roll leads you to the next level of spicy tuna roll.",
+            "price":"12.95"
+         },
+         {
+            "name":"Caterpillar",
+            "description":"Great combination of avocado and eel roll and covered with sweet taste of eel sauce and masago.",
+            "price":"10.95"
+         },
+         {
+            "name":"Cherry Blossom",
+            "description":"This lively roll features salmon and avocado in the center, and layered with mouth watering tuna completed in the shape of flower.",
+            "price":"14.95"
+         },
+         {
+            "name":"Dragon",
+            "description":"Eel layers on the California roll.",
+            "price":"10.95"
+         },
+         {
+            "name":"Kiss of Dragon",
+            "description":"This roll offers the fresh taste of yellowtail, tuna, and avocado, followed by sweet taste of eel on top and house sauce.",
+            "price":"13.95"
+         },
+         {
+            "name":"Hawaiian",
+            "description":"Take fresh tuna, avocado, and macadamia nuts, wrapped in a soybean sheet.",
+            "price":"9.50"
+         },
+         {
+            "name":"Crazy Horse",
+            "description":"Integrating chunks of salmon, tuna, yellowtail, avocado, and masago will satisfy your taste buds with every bite.",
+            "price":"10.95"
+         },
+         {
+            "name":"Rainbow",
+            "description":"Our California roll, topped with various types of fresh fish on the California roll,",
+            "price":"10.95"
+         },
+         {
+            "name":"North Seattle",
+            "description":"This roll of yellowtail and avocado adds to its repertoire with slices of fresh salmon, tuna, and eel.",
+            "price":"13.95"
+         },
+         {
+            "name":"Aloha",
+            "description":"This refreshing roll is filled with sweet crab meat rolled with macadamia nuts, avocado, cucumber, wrapped in a soybean sheet.",
+            "price":"6.95"
+         },
+         {
+            "name":"Willamette",
+            "description":"Salmon layer on spicy scallop roll.",
+            "price":"11.95"
+         },
+         {
+            "name":"Orange Blossom",
+            "description":"Delivering a taste all of it's own, this roll consists of tuna and avocado in the center and covered with salmon.",
+            "price":"12.95"
+         },
+         {
+            "name":"Aaron California",
+            "description":"A special sauce on California roll&baked.",
+            "price":"9.95"
+         },
+         {
+            "name":"Washington",
+            "description":"Avocado, cucumber, salmon, spicy sauce and lettuce, crunch.",
+            "price":"7.95"
+         },
+         {
+            "name":"Spicy Rainbow",
+            "description":"Rainbow roll on spicy tuna.",
+            "price":"11.95"
+         },
+         {
+            "name":"Spicy Crunch California",
+            "description":"Avocado, cucumber, crab meat, spicy sauce, lettuce covered with tempura crunch.",
+            "price":"8.95"
+         },
+         {
+            "name":"Seattle",
+            "description":"Crab meat, yellowtail, eel, avocado, cucumber, and masago is drizzled with our house sauce.",
+            "price":"9.95"
+         }
+      ]
+   },
+   {
+      "categoryName":"Tempura Rolls",
+      "categoryId":"tempura-rolls",
+      "dishes":[
+         {
+            "name":"Sea Hawk",
+            "description":"Starting with deep-fried shrimp and creamy avocado that is laced with albacore, salmon, eel, and garnished with masago, providing variety that will entice you with every bite.",
+            "price":"10.95"
+         },
+         {
+            "name":"Ichi",
+            "description":"Freshly spiced salmon, tuna, yellowtail, melting in your mouth, covered with tempura crunch.",
+            "price":"9.95"
+         },
+         {
+            "name":"Godzilla",
+            "description":"Perfect harmony of shrimp tempura, eel, avocado, and cream cheese.",
+            "price":"10.95"
+         },
+         {
+            "name":"Mariners",
+            "description":"Starting with deep-fried shrimp, wrapped with slices of creamy avocado, tuna, eel, and garnished with masago for a taste that is equally exquisite as its appearance.",
+            "price":"11.95"
+         },
+         {
+            "name":"Las Vegas",
+            "description":"Tempura deep-fried with cucumber, avocado, crab meat, eel, masago and our house sauce.",
+            "price":"8.95"
+         },
+         {
+            "name":"Loehmann's",
+            "description":"A reflection of the name. This roll features deep-fried shrimp nestled between fresh cucumber slices and strands of asparagus, topped off with masago.",
+            "price":"8.95"
+         },
+         {
+            "name":"Shrimp Tempura",
+            "description":"Very tasty deep-fried shrimp, avocado, cucumber, and masago give you satisfaction!",
+            "price":"7.95"
+         },
+         {
+            "name":"Crispy",
+            "description":"Basic in name and taste, this roll featured salmon, yellowtail, tuna, and avocado, wrapped with seaweed and lightly deep-fried.",
+            "price":"10.95"
+         },
+         {
+            "name":"Crispy Philadelphia",
+            "description":"This roll is filled with smoked salmon and cream cheese, deep-fried lightly, and caressed with masago and house sauce.",
+            "price":"8.95"
+         },
+         {
+            "name":"Mt. Rainier",
+            "description":"This is an enhanced version of our spicy tuna roll, with the exception that is deep-fried, then drizzled with masago.",
+            "price":"8.95"
+         },
+         {
+            "name":"Spider",
+            "description":"Very tasty of tempura deep-fried, soft shell crab, avocado, cucumber and masago.",
+            "price":"7.95"
+         },
+         {
+            "name":"Crunch",
+            "description":"Tempura deep-fried shrimp and asparagus mixed with crab meat, avocado, cucumber, and covered with tempura crunch.",
+            "price":"7.95"
+         },
+         {
+            "name":"Fried Spicy Tuna",
+            "description":"Deep-fried spicy tuna roll. Spicy and crispy!",
+            "price":"7.95"
+         }
+      ]
+   },
+   {
+      "categoryName":"Baked Rolls",
+      "categoryId":"baked-rolls",
+      "dishes":[
+         {
+            "name":"Lion King",
+            "description":"Our famous California roll topped with a fillet of salmon, that is baked to perfection, with house sauce, and tobiko garnished at the end.",
+            "price":"12.95"
+         },
+         {
+            "name":"Scallop",
+            "description":"Scallop on California roll with special sauce baked masago and green onion on top.",
+            "price":"12.95"
+         },
+         {
+            "name":"Baked Scallop",
+            "description":"What a rich and tasty roll!Special baked scallop sauce on the California roll!",
+            "price":"12.95"
+         }
+      ]
+   },
+   {
+      "categoryName":"Hand Rolls",
+      "categoryId":"hand-rolls",
+      "dishes":[
+         {
+            "name":"California",
+            "description":"Avocado, cucumber, crab meat, masago.",
+            "price":"6.50"
+         },
+         {
+            "name":"Spicy Tuna",
+            "description":"Spicy tuna, cucumber. daikon sprouts.",
+            "price":"6.95"
+         },
+         {
+            "name":"Negi Hamachi",
+            "description":"Hamachi, green onions, daikon sprouts.",
+            "price":"6.25"
+         },
+         {
+            "name":"Unagi",
+            "description":"Avocado.unagi, daikon sprouts.",
+            "price":"6.50"
+         }
+      ]
+   },
+   {
+      "categoryName":"Vegetable Rolls",
+      "categoryId":"vegetable-rolls",
+      "dishes":[
+         {
+            "name":"Green Roll",
+            "description":"Tempura green onion, asparagus and avocado layers. Great vegetarian roll!",
+            "price":"7.95"
+         },
+         {
+            "name":"Creamy Avocado Roll",
+            "description":"Creamy inside, Crunch outside!",
+            "price":"7.95"
+         },
+         {
+            "name":"Bloody Mary Roll",
+            "description":"This roll features kanpyo, inari, cucumber in the center with spicy sauce and jalapeno on top. Sweet and Spicy!",
+            "price":"9.95"
+         },
+         {
+            "name":"Honolulu Roll",
+            "description":"Avocado, makadamia nuts, Carrot with soybean sheet. Very fresh and nutty!",
+            "price":"7.95"
+         },
+         {
+            "name":"Sweet Crunch Roll",
+            "description":"Deep-fried sweet potato and asparagus with our house sauce.",
+            "price":"7.95"
+         },
+         {
+            "name":"Kappa",
+            "description":"Cucumber",
+            "price":"3.95"
+         },
+         {
+            "name":"Oshinko",
+            "description":"Yellow pickle",
+            "price":"3.95"
+         },
+         {
+            "name":"Avocado",
+            "description":null,
+            "price":"5.25"
+         },
+         {
+            "name":"Mushroom",
+            "description":"Shitake mushroom",
+            "price":"4.25"
+         },
+         {
+            "name":"Asparagus",
+            "description":"Steamed asparagus",
+            "price":"3.95"
+         },
+         {
+            "name":"Pumpkin",
+            "description":"Kanpyo",
+            "price":"3.95"
+         }
+      ]
+   },
+
+
+   {
+      "categoryName":"Kitchen",
+      "categoryId":"kitchen",
+      "dishes":[
+         {
+            "name":"Nabeyaki Udon",
+            "description":"Thick white noodles in a soup with shrimp tempura and egg.",
+            "price":"10.95"
+         },
+         {
+            "name":"Chicken teriyaki",
+            "description":"Served with miso soup and rice.",
+            "price":"8.95"
+         }
+      ]
+   },
+   {
+      "categoryName":"Course Meal",
+      "categoryId":"course-meal",
+      "dishes":[
+         {
+            "name":"Sushi Special",
+            "description":"Tuna, salmon, yellowtail, shrimp, mackerel, octopus, and 6pcs tuna roll.",
+            "price":"17.95"
+         },
+         {
+            "name":"I love Sushi",
+            "description":"Tuna, salmon, tilapia, shrimp, yelllowtail, eel, albacore tuna, surf clam sushi and 8pcs california roll.",
+            "price":"18.95  "
+         },
+         {
+            "name":"I love Sashimi (Large)",
+            "description":"2pcs tuna, 3pcs salmon, 2pcs albacore tuna, 2pcs yellowtail, 2pcs surf clam, 2pcs scallop, 2pcs tilapia and served with rice.",
+            "price":"22.95"
+         },
+         {
+            "name":"I love Sashimi (Small)",
+            "description":"2pcs tuna, 2pcs salmon, 2pcs albacore tuna, 2pcs yellowtail, 2pcs surf clam, 2pcs tilapia and served rice.",
+            "price":"18.95"
+         },
+         {
+            "name":"I love Sushi and Sashimi",
+            "description":"Tuna, salmon, shrimp, eel sushi, 2pcs tuna, 2pcs salmon, 2pcs albacore tuna, 2pcs tilapia sashimi and 8pcs California roll.",
+            "price":"23.95"
+         },
+         {
+            "name":"Chirashi Bowl",
+            "description":"Seaweed salad, 1pc shrimp, 1pc tamago, 3pcs tuna, 3pcs albacore tuna, 3pcs salmon, 2pcs tilapia sashimi on a bowl of sushi rice.",
+            "price":"19.95"
+         },
+         {
+            "name":"Una-ju Bowl",
+            "description":"7pcs broiled eel on a bowl of sushi rice.",
+            "price":"18.95"
+         },
+         {
+            "name":"Sushi Bento",
+            "description":"Albacore tuna, salmon, tilapia, shrimp sushi, 8pcs California roll, 2pcs salmon and 2pcs albacore tuna sashimi, spicy tuna hand roll, cucumber salad, seaweed salad.",
+            "price":"22.95"
+         }
+      ]
+   }
+]
