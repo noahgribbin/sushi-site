@@ -1,11 +1,14 @@
 import React from 'react';
+import Select from 'react-select';
 
 class MenuSelector extends React.Component {
   constructor(props){
     super(props)
     this.onClick = this.onClick.bind(this)
+    this.handleChange = this.handleChange.bind(this)
     this.state={
       avtive:'traditional-rolls',
+      selectedOption: ''
     }
   }
 
@@ -16,6 +19,11 @@ class MenuSelector extends React.Component {
     }, () => {
       this.props.hoistState(this.state.active)
     })
+  }
+
+  handleChange(selectedOption){
+    this.setState({ selectedOption });
+    console.log(`Selected: ${selectedOption.label}`);
   }
 
   render(){
@@ -36,14 +44,27 @@ class MenuSelector extends React.Component {
         </li>
       )
     })
+    const { selectedOption } = this.state.selectedOption;
+    const value = selectedOption && selectedOption.value;
+    var select = <Select
+                    name="form-field-name"
+                    value={value}
+                    onChange={this.handleChange}
+                    searchable={false}
+                    options={[
+                    { value: 'one', label: 'One' },
+                    { value: 'two', label: 'Two' },
+                    ]}
+                  />
     return(
       <section className="menu-selector">
         <ul>
-          {items}
+          {select}
         </ul>
       </section>
     )
   }
 }
+
 
 export default MenuSelector;
