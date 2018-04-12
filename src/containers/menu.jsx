@@ -17,7 +17,6 @@ class Menu extends React.Component {
 
   render(){
     var menus = menu.map((item, i) => {
-      console.log(item, i);
       if(this.state.active === item.categoryId){
         return(
           <MenuComponent menu={item} key={i} />

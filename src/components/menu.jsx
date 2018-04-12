@@ -10,9 +10,7 @@ class MenuComponent extends React.Component {
   }
 
   render(){
-    console.log(this.props.menu.dishes);
     var items = this.props.menu.dishes.map((item, i) => {
-      console.log(item, i);
       return(
         <MenuItem item={item} key={i}/>
       )

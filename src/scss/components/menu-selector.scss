@@ -1,13 +1,14 @@
 .menu-selector{
   text-align: center;
-  font-size: 150%;
-  ul{
-    li{
-      font-weight: lighter;
-      display: inline-block;
-      padding: 0 1rem 0 1rem
-    }
-  }
+  font-size: 2em;
+  line-height: 2em;
+  // ul{
+  //   li{
+  //     font-weight: lighter;
+  //     display: inline-block;
+  //     padding: 0 1rem 0 1rem
+  //   }
+  // }
 }
 .active{
   position: relative;
@@ -21,4 +22,24 @@
    width: 50%;
    height: 1px;
 
+}
+
+.fake-select{
+  border: 2px solid grey;
+  box-sizing: border-box;
+  padding: .5em 0;
+  width: 80%;
+  font-size: 2em;
+  margin: auto;
+}
+.fake-option-ul{
+  // display: none;
+}
+.fake-option{
+  width: 80%;
+  margin: auto;
+  padding: 0;
+}
+.hide{
+  display: none;
 }

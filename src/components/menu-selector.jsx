@@ -5,10 +5,14 @@ class MenuSelector extends React.Component {
   constructor(props){
     super(props)
     this.onClick = this.onClick.bind(this)
+    this.onClickFakeOption = this.onClickFakeOption.bind(this)
+    this.onClickFakeSelect = this.onClickFakeSelect.bind(this)
+    this.onChange = this.onChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.state={
-      avtive:'traditional-rolls',
-      selectedOption: ''
+      active:'traditional-rolls',
+      activeName:'Traditional Rolls',
+      hideOptions: true
     }
   }
 
@@ -21,17 +25,50 @@ class MenuSelector extends React.Component {
     })
   }
 
+  onClickFakeSelect(prevstate){
+    this.setState(prevState => ({
+          hideOptions: !prevState.hideOptions
+      }));
+  }
+  onClickFakeOption(e){
+    var id = e.target.getAttribute('id')
+    var name = e.target.getAttribute('name')
+    this.setState({
+      active: id,
+      activeName: name,
+      hideOptions: true,
+    }, () => {
+      this.props.hoistState(this.state.active)
+    })
+  }
+  onChange(e){
+    this.setState({
+      active: e.target.value
+    }, () => {
+      this.props.hoistState(this.state.active)
+    })
+  }
+
   handleChange(selectedOption){
     this.setState({ selectedOption });
-    console.log(`Selected: ${selectedOption.label}`);
   }
 
   render(){
-    console.log(this.props.active, '}|}|}|}|}');
     var state = this.state
+    var options = this.props.menu.map((item, i) => {
+        return(
+          <li id={item.categoryId}
+              className="fake-option"
+              key={`option${i}`}
+              name={item.categoryName}
+              value={item.categoryId}
+              onClick={this.onClickFakeOption}
+              >
+              {item.categoryName}
+          </li>
+        )
+    })
     var items = this.props.menu.map((item, i) => {
-      console.log('popopopopopop', item)
-      console.log(this.props.active, '{}{}{}{}{}{}{}{}{}');
       return(
         <li id={item.categoryId}
             onClick={this.onClick}
@@ -44,22 +81,15 @@ class MenuSelector extends React.Component {
         </li>
       )
     })
-    const { selectedOption } = this.state.selectedOption;
-    const value = selectedOption && selectedOption.value;
-    var select = <Select
-                    name="form-field-name"
-                    value={value}
-                    onChange={this.handleChange}
-                    searchable={false}
-                    options={[
-                    { value: 'one', label: 'One' },
-                    { value: 'two', label: 'Two' },
-                    ]}
-                  />
     return(
       <section className="menu-selector">
-        <ul>
-          {select}
+        <div className="fake-select"
+             onClick={this.onClickFakeSelect}>
+                {this.state.activeName}
+        </div>
+        <ul className={`fake-option-ul ${this.state.hideOptions ? 'hide' :null}`}
+            onChange={this.onChange}>
+          {options}
         </ul>
       </section>
     )
