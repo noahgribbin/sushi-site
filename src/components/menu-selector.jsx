@@ -74,7 +74,7 @@ class MenuSelector extends React.Component {
             onClick={this.onClick}
             key={i}
             className={`menu-selector-item
-                         ${this.props.active === item.categoryId ? "active": null}`
+                         ${this.props.active === item.categoryId ? "active ": null}`
                       }
             >
             {item.categoryName}
@@ -83,11 +83,17 @@ class MenuSelector extends React.Component {
     })
     return(
       <section className="menu-selector">
-        <div className="fake-select"
+        <div className={`fake-select
+                          ${!this.state.hideOptions ? "fake-select-border ": null}
+                       `}
              onClick={this.onClickFakeSelect}>
                 {this.state.activeName}
         </div>
-        <ul className={`fake-option-ul ${this.state.hideOptions ? 'hide' :null}`}
+        <ul className={`fake-option-ul
+                          ${this.state.hideOptions ? 'hide' :null}
+                          ${!this.state.hideOptions ? "fake-option-border ": null}
+
+                      `}
             onChange={this.onChange}>
           {options}
         </ul>

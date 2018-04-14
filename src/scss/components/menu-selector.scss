@@ -1,6 +1,6 @@
 .menu-selector{
   text-align: center;
-  font-size: 2em;
+  font-size: 1em;
   line-height: 2em;
   // ul{
   //   li{
@@ -9,6 +9,9 @@
   //     padding: 0 1rem 0 1rem
   //   }
   // }
+  margin: auto;
+  width: 80%;
+  box-sizing: border-box;
 }
 .active{
   position: relative;
@@ -28,17 +31,29 @@
   border: 2px solid grey;
   box-sizing: border-box;
   padding: .5em 0;
-  width: 80%;
-  font-size: 2em;
+  // width: 80%;
+  font-size: 1em;
   margin: auto;
+  position: relative;
 }
 .fake-option-ul{
-  // display: none;
+  width: 79.00%;
+  background: white;
+  left: auto;
+  position: absolute;
+  margin: auto;
+  box-sizing: border-box;
 }
 .fake-option{
-  width: 80%;
-  margin: auto;
-  padding: 0;
+  padding: .5em 0;
+  font-size: 1em;
+}
+.fake-select-border{
+  border-bottom: none;
+}
+.fake-option-border{
+  border: 2px solid grey;
+  border-top: none;
 }
 .hide{
   display: none;
