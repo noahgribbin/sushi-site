@@ -5,6 +5,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const extractSass = new ExtractTextPlugin({
     filename: "main.css"
 });
+require('dotenv').config()
+console.log(__dirname);
+console.log(process.env);
 const config = {
   entry:`${__dirname}/../index.js`,
   output: {
@@ -47,8 +50,14 @@ const config = {
   },
   plugins: [
     extractSass,
-    new HtmlWebpackPlugin({template: './index.html'})
-  ]
+    new HtmlWebpackPlugin({template: './index.html'}),
+    new webpack.DefinePlugin({
+      API_KEY: JSON.stringify(process.env.API_KEY)
+    })
+  ],
+  node: {
+  fs: 'empty'
+}
 };
 
 module.exports = config;
