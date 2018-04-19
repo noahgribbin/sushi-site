@@ -12,7 +12,19 @@ class Contact extends React.Component {
 
     return(
       <section className="contact">
-        <img src={`https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400&key=${API_KEY}`}></img>
+        <div className="contact-container">          
+          <div className="contact-info">
+            <h2>Contact Us</h2>
+            <p>6311 Roosevelt Way NE, Seattle</p>
+            <p>206 522 4601</p>
+          </div>
+          <div className="iframe-container">
+            <iframe
+              src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=Sushi+Tokyo,Seattle+WA`}
+              allowFullScreen>
+            </iframe>
+          </div>
+        </div>
       </section>
     )
   }
