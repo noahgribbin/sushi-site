@@ -1,4 +1,5 @@
 import React from 'react';
+import Media from "react-media";
 
 class Nav extends React.Component {
   constructor(props){
@@ -13,11 +14,9 @@ class Nav extends React.Component {
     this.setState({showNav:false})
     document.body.style.overflow = "visible";
     let id = e.target.getAttribute('link-id');
-    // let element = document.getElementById(id);
     $('html, body').animate({
       scrollTop: $(`#${id}`).offset().top
     }, 750);
-    // element.scrollIntoView({behavior:"smooth"})
   }
   onClickShowHide(){
     document.body.style.overflow === "hidden" ? document.body.style.overflow = "visible" : document.body.style.overflow = "hidden" ;
@@ -28,20 +27,36 @@ class Nav extends React.Component {
   render(){
     return(
       <section>
-
-      <div className={`nav-toggle ${this.state.showNav ? 'temp' : null}`}
-           onClick={this.onClickShowHide}>{this.state.showNav}
-      </div>
-      <section className={`mobile-nav-container ${this.state.showNav ? ' show' : 'hide'}`}>
-        <section className={`mobile-nav ${this.state.showNav ? 'show' : 'hide'}`}>
-          <ul>
-            <li onClick={this.onClickNavigate} link-id="home">Home</li>
-            <li onClick={this.onClickNavigate} link-id="about">About</li>
-            <li onClick={this.onClickNavigate} link-id="menu">Menu</li>
-            <li onClick={this.onClickNavigate} link-id="contact">Contact</li>
-          </ul>
-        </section>
-      </section>
+        <Media query="(max-width: 900px)">
+          {matches =>
+            matches ? (
+              <section>
+                <div className={`nav-toggle ${this.state.showNav ? 'temp' : null}`}
+                  onClick={this.onClickShowHide}>{this.state.showNav}
+                </div>
+                <section className={`mobile-nav-container ${this.state.showNav ? ' show' : 'hide'}`}>
+                  <section className={`mobile-nav ${this.state.showNav ? 'show' : 'hide'}`}>
+                    <ul>
+                      <li onClick={this.onClickNavigate} link-id="home">Home</li>
+                      <li onClick={this.onClickNavigate} link-id="about">About</li>
+                      <li onClick={this.onClickNavigate} link-id="menu">Menu</li>
+                      <li onClick={this.onClickNavigate} link-id="contact">Contact</li>
+                    </ul>
+                  </section>
+                </section>
+              </section>
+            ):(
+              <section className="desktop-nav-container">
+                  <ul>
+                    <li onClick={this.onClickNavigate} link-id="home">Home</li>
+                    <li onClick={this.onClickNavigate} link-id="about">About</li>
+                    <li onClick={this.onClickNavigate} link-id="menu">Menu</li>
+                    <li onClick={this.onClickNavigate} link-id="contact">Contact</li>
+                  </ul>
+              </section>
+            )
+          }
+        </Media>
     </section>
     )
   }

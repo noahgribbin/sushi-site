@@ -11,7 +11,7 @@ class Contact extends React.Component {
 
 
     return(
-      <section id="contact" className="contact">
+      <section id="contact" className="contact nav-buffer">
         <div className="contact-container">
           <div className="contact-info">
             <h2>Check Us Out</h2>

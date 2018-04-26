@@ -3,7 +3,7 @@ class About extends React.Component {
   render(){
     // seperate about content and open hours into components
     return(
-      <section id="about" className="about">
+      <section id="about" className="about nav-buffer">
         <section className="about-image"></section>
         <section className="about-text">
           <div className="about-text-wrapper">

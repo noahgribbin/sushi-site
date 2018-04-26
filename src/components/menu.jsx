@@ -17,7 +17,7 @@ class MenuComponent extends React.Component {
     })
     return(
       <section className='menu'>
-          <h3 className="menu-title">{this.props.menu.categoryName}</h3>
+          {/* <h3 className="menu-title">{this.props.menu.categoryName}</h3> */}
           {items}
       </section>
     )

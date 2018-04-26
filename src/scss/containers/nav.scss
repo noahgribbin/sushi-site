@@ -18,6 +18,24 @@
     }
   }
 }
+.desktop-nav-container{
+  height: 5em;
+  width: 100vw;
+  position: fixed;
+  background: #eee;
+  z-index: 1;
+  ul{
+    height: 100%;
+    text-align: center;
+    li{
+      height:100%;
+      line-height: 5em;
+    display: inline-block;
+    width: 20%;
+    margin:auto;
+    }
+  }
+}
 
 .nav-toggle{
   position: fixed;
@@ -27,6 +45,10 @@
   height: 30px;
   width: 30px;
   z-index: 2;
+}
+
+.nav-buffer{
+  padding-top: 5em;
 }
 
 .show{
