@@ -11,10 +11,10 @@ class Contact extends React.Component {
 
 
     return(
-      <section className="contact">
-        <div className="contact-container">          
+      <section id="contact" className="contact">
+        <div className="contact-container">
           <div className="contact-info">
-            <h2>Contact Us</h2>
+            <h2>Check Us Out</h2>
             <p>6311 Roosevelt Way NE, Seattle</p>
             <p>206 522 4601</p>
           </div>

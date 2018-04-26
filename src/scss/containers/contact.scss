@@ -1,15 +1,20 @@
 .contact{
-  height: 100vh;
+  // height: 100vh;
 }
 .contact-info{
-  height: 30%;
+  p{
+    margin-top: 1em;
+  }
+  // height: 30%;
 }
 .contact-container{
   width: calc(100% - 40px);
   margin: auto;
+  height: 100%
 }
 .iframe-container{
-  height: 70%;
+  height: 20em;
+  margin: 5% 0 5% 0;
   // width: 100%;
 }
 iframe{

@@ -10,7 +10,7 @@
   //   }
   // }
   margin: auto;
-  width: 80%;
+  width: calc(100% - 40px);
   box-sizing: border-box;
 }
 .active{
@@ -32,12 +32,12 @@
   box-sizing: border-box;
   padding: .5em 0;
   // width: 80%;
-  font-size: 1em;
+  font-size: 1.5em;
   margin: auto;
   position: relative;
 }
 .fake-option-ul{
-  width: 80%;
+  width: calc(100% - 40px);
   background: white;
   left: auto;
   position: absolute;
@@ -46,7 +46,7 @@
 }
 .fake-option{
   padding: .5em 0;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 .fake-select-border{
   border-bottom: none;
