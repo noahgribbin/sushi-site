@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
+import Media from "react-media";
 
 class MenuSelector extends React.Component {
   constructor(props){
@@ -82,22 +83,26 @@ class MenuSelector extends React.Component {
       )
     })
     return(
-      <section className="menu-selector">
-        <div className={`fake-select
-                          ${!this.state.hideOptions ? "fake-select-border ": null}
-                       `}
-             onClick={this.onClickFakeSelect}>
-                {this.state.activeName}
-        </div>
-        <ul className={`fake-option-ul
-                          ${this.state.hideOptions ? 'hide' :null}
-                          ${!this.state.hideOptions ? "fake-option-border ": null}
-
-                      `}
-            onChange={this.onChange}>
-          {options}
-        </ul>
-      </section>
+      <Media query="(max-width: 900px)">
+        {matches =>
+          matches ? (
+            <section className="menu-selector">
+              <div className={`fake-select ${!this.state.hideOptions ? "fake-select-border ": null}`}
+                   onClick={this.onClickFakeSelect}>
+                      {this.state.activeName}
+              </div>
+              <ul className={`fake-option-ul ${this.state.hideOptions ? 'hide' :null} ${!this.state.hideOptions ? "fake-option-border ": null}`}
+                  onChange={this.onChange}>
+                {options}
+              </ul>
+            </section>
+          ):(
+            <section>
+              <ul>{items}</ul>
+            </section>
+          )
+        }
+      </Media>
     )
   }
 }

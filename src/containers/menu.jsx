@@ -14,7 +14,20 @@ class Menu extends React.Component {
   hoistState(category){
     this.setState({active:category})
   }
-
+  componentDidMount(){
+    let maxHeight = 0;
+    $('.menu .menu-item').each(function(){
+      if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    });
+    $('.menu .menu-item').height(maxHeight);
+  }
+  componentDidUpdate(){
+    let maxHeight = 0;
+    $('.menu .menu-item').each(function(){
+      if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    });
+    $('.menu .menu-item').height(maxHeight);
+  }
   render(){
     var menus = menu.map((item, i) => {
       if(this.state.active === item.categoryId){
