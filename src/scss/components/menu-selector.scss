@@ -1,16 +1,19 @@
 .menu-selector{
+  position: relative;
   text-align: center;
   font-size: 1em;
   line-height: 2em;
   margin: 1em auto;
   width: 50%;
   box-sizing: border-box;
+  z-index: 5;
 }
 .menu-selector-item{
   display: inline-block;
   margin: 0 1em;
   font-size: 1.5em;
 }
+
 .active{
   position: relative;
 }
@@ -27,15 +30,20 @@
 
 .fake-select{
   border: 2px solid grey;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   padding: .5em 0;
   // width: 80%;
+  background: white;
+  height: 50px;
+  line-height: 50px;
   font-size: 1.5em;
   margin: auto;
   position: relative;
 }
 .fake-option-ul{
-  width: 50%;
+  height: 50vh;
+  overflow-y: scroll;
+  width: 100%;
   background: white;
   left: auto;
   position: absolute;
@@ -43,8 +51,26 @@
   box-sizing: border-box;
 }
 .fake-option{
+  height: 50px;
+  line-height: 50px;
+  position:relative;
   padding: .5em 0;
+}
+.fake-option:hover{
+}
+.menu-selector-span:hover{
+  transition: 400ms;
+  font-size: 1.75em;
+  color: rgba(0,0,0,0.7);
+}
+.menu-selector-span{
+  height: 100%;
+  width: 100%;
   font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 }
 .fake-select-border{
   border-bottom: none;
@@ -55,4 +81,49 @@
 }
 .hide{
   display: none;
+}
+.select-box-carret{
+  transition: 500ms;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carret-down{
+  transition: 500ms;
+  transform: rotate(180deg) translateY(50%);
+
+}
+.overlay-shader{
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+
+// scrollbar styling
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

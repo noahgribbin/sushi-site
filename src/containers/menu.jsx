@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery'
 import MenuSelector from '../components/menu-selector.jsx'
 import MenuComponent from '../components/menu.jsx'
 import menu from '../data/menu.json'
@@ -15,19 +16,24 @@ class Menu extends React.Component {
     this.setState({active:category})
   }
   componentDidMount(){
+    if($(window).width() > 900){
+      console.log('bigger');
     let maxHeight = 0;
     $('.menu .menu-item').each(function(){
       if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
     });
     $('.menu .menu-item').height(maxHeight);
+  }
   }
   componentDidUpdate(){
-    let maxHeight = 0;
-    $('.menu .menu-item').each(function(){
-      if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
-    });
-    $('.menu .menu-item').height(maxHeight);
-  }
+    if($(window).width() > 900){
+      let maxHeight = 0;
+      $('.menu .menu-item').each(function(){
+        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+      });
+      $('.menu .menu-item').height(maxHeight);
+    }
+    }
   render(){
     var menus = menu.map((item, i) => {
       if(this.state.active === item.categoryId){

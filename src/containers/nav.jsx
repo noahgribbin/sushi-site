@@ -31,9 +31,10 @@ class Nav extends React.Component {
           {matches =>
             matches ? (
               <section>
-                <div className={`nav-toggle ${this.state.showNav ? 'temp' : null}`}
-                  onClick={this.onClickShowHide}>{this.state.showNav}
+                <div cassName="nav-toggle" onClick={this.onClickShowHide}>
+                  <i className={`nav-toggle fas fa-3x fa-bars ${this.state.showNav ? 'temp' : null}`}></i>
                 </div>
+
                 <section className={`mobile-nav-container ${this.state.showNav ? ' show' : 'hide'}`}>
                   <section className={`mobile-nav ${this.state.showNav ? 'show' : 'hide'}`}>
                     <ul>

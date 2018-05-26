@@ -15,6 +15,15 @@
   text-align:center;
   color:white;
   font-weight: lighter;
+  div{
+    margin-top: 2em;
+    span{
+      font-size: 1.75em;
+    }
+    .number-font-match{
+      font-size: 2em;
+    }
+  }
 }
 .home-title{
   font-size: 4em;

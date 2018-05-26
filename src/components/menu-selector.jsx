@@ -8,6 +8,7 @@ class MenuSelector extends React.Component {
     this.onClick = this.onClick.bind(this)
     this.onClickFakeOption = this.onClickFakeOption.bind(this)
     this.onClickFakeSelect = this.onClickFakeSelect.bind(this)
+    this.onClickShader = this.onClickShader.bind(this)
     this.onChange = this.onChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.state={
@@ -27,13 +28,35 @@ class MenuSelector extends React.Component {
   }
 
   onClickFakeSelect(prevstate){
+    document.body.style.overflow = "hidden";
+
+    $('html, body').animate({
+      scrollTop: $(`.fake-select`).offset().top - 100
+    }, 750);
+
     this.setState(prevState => ({
           hideOptions: !prevState.hideOptions
       }));
+
+    $('.select-box-carret').toggleClass('carret-down');
   }
+
+  onClickShader(){
+    document.body.style.overflow = "visible";
+    this.setState({
+      active: this.state.active,
+      activeName: this.state.activeName,
+      hideOptions: true,
+    }, () => {
+      this.props.hoistState(this.state.active)
+    })
+  }
+
   onClickFakeOption(e){
+    document.body.style.overflow = "visible";
     var id = e.target.getAttribute('id')
     var name = e.target.getAttribute('name')
+    console.log(name);
     this.setState({
       active: id,
       activeName: name,
@@ -51,6 +74,7 @@ class MenuSelector extends React.Component {
   }
 
   handleChange(selectedOption){
+    console.log(selectedOption);
     this.setState({ selectedOption });
   }
 
@@ -61,11 +85,15 @@ class MenuSelector extends React.Component {
           <li id={item.categoryId}
               className="fake-option"
               key={`option${i}`}
-              name={item.categoryName}
-              value={item.categoryId}
-              onClick={this.onClickFakeOption}
               >
-              {item.categoryName}
+                <span className="menu-selector-span"
+                  id={item.categoryId}
+                  onClick={this.onClickFakeOption}
+                  value={item.categoryId}
+                  name={item.categoryName}
+                  >
+                  {item.categoryName}
+                </span>
           </li>
         )
     })
@@ -78,31 +106,49 @@ class MenuSelector extends React.Component {
                          ${this.props.active === item.categoryId ? "active ": null}`
                       }
             >
-            {item.categoryName}
+              {item.categoryName}
         </li>
       )
     })
     return(
-      <Media query="(max-width: 900px)">
-        {matches =>
-          matches ? (
+      // <Media query="(max-width: 1200px)">
+      //   {matches =>
+      //     matches ? (
+      //       <section className="menu-selector">
+      //         <div className={`fake-select ${!this.state.hideOptions ? "fake-select-border ": null}`}
+      //              onClick={this.onClickFakeSelect}>
+      //                 <span>{this.state.activeName}</span>
+      //           <i className={`fas fa-caret-down select-box-carret ${!this.state.hideOptions ? "carret-down ": null}`}></i>
+      //         </div>
+      //         <ul className={`fake-option-ul ${this.state.hideOptions ? 'hide' :null} ${!this.state.hideOptions ? "fake-option-border ": null}`}
+      //             onChange={this.onChange}>
+      //           {options}
+      //         </ul>
+      //       </section>
+      //     ):(
+      //       <section className="menu-selector">
+      //         <ul>{items}</ul>
+      //       </section>
+      //     )
+      //   }
+      // </Media>
+        <section>
+          <div className={`${!this.state.hideOptions ? 'overlay-shader': null} `}
+               onClick={this.onClickShader}></div>
             <section className="menu-selector">
+
               <div className={`fake-select ${!this.state.hideOptions ? "fake-select-border ": null}`}
                    onClick={this.onClickFakeSelect}>
-                      {this.state.activeName}
+                      <span>{this.state.activeName}</span>
               </div>
               <ul className={`fake-option-ul ${this.state.hideOptions ? 'hide' :null} ${!this.state.hideOptions ? "fake-option-border ": null}`}
                   onChange={this.onChange}>
                 {options}
               </ul>
+
             </section>
-          ):(
-            <section>
-              <ul>{items}</ul>
-            </section>
-          )
-        }
-      </Media>
+
+          </section>
     )
   }
 }
