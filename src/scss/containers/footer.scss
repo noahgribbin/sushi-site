@@ -1,6 +1,19 @@
 .footer-continer{
-  height: 5em;
+  // height: 5em;
   width: 100%;
   background: rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  padding: 2em;
+  p{
+    text-align: center;
+  color: white;
+    margin: 1em;
+  }
 
+}
+.footer-links{
+  text-align: center;
+  svg{
+    color: white;
+  }
 }

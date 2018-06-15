@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/sushi-logo.svg'
 class Home extends React.Component {
   render(){
     return(
@@ -6,14 +7,12 @@ class Home extends React.Component {
         <div className="color-overlay"></div>
         <div className="home-content-container">
           <h1 className="home-title">SUSHI TOKYO</h1>
-          <div>  
+          <div>
             <span className="number-font-match">206.522.4601</span>
-          <div>
-          </div>
-            <span>TUE - SAT </span> : <span className="number-font-match"> 11:30 - 10</span>
           </div>
           <div>
-            <span>SUN </span>: <span className="number-font-match"> 11:30 - 8:30</span>
+            {/* <img src={logo}></img> */}
+            {/* <a href="/" className="logo"></a> */}
           </div>
           <div>
             <span>6311 ROOSEVELT WAY NE</span>

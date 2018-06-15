@@ -31,7 +31,7 @@ class MenuSelector extends React.Component {
     document.body.style.overflow = "hidden";
 
     $('html, body').animate({
-      scrollTop: $(`.fake-select`).offset().top - 100
+      scrollTop: $(`.fake-select`).offset().top - 41.25
     }, 750);
 
     this.setState(prevState => ({

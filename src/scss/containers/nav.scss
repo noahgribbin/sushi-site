@@ -20,6 +20,7 @@
 }
 .desktop-nav-container{
   height: 5em;
+  line-height: 5em;
   width: 100vw;
   position: fixed;
   background: #eee;
@@ -29,10 +30,9 @@
     text-align: center;
     li{
       height:100%;
-      line-height: 5em;
-    display: inline-block;
-    width: 20%;
-    margin:auto;
+      display: inline-block;
+      width: 20%;
+      margin:auto;
     }
   }
 }
@@ -43,19 +43,24 @@
   right: 20px;
   color: #eee;
   // height: 30px;
-  z-index: 2;
+  z-index: 10;
   svg{
+    color: inherit;
     width: 50px;
   }
 }
-
-.nav-buffer{
-  padding-top: 5em;
+@media (min-width: 900px) {
+  .nav-buffer{
+    padding-top: 5em;
+  }
 }
 
 .show{
   display: block;
 }
-.hdie{
+.hide{
   display: none;
+}
+.hamburger-alt{
+  color:black;
 }

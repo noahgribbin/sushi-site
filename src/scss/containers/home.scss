@@ -4,6 +4,7 @@
   position: relative;
   background: url('../assets/sushi.jpg');
   background-size: cover;
+  background-position: center;
   font-style: normal;
   font-weight: 100;
 }
@@ -14,19 +15,22 @@
   transform: translate(-50%, 50%);
   text-align:center;
   color:white;
+  font-family: 'Leftheria';
   font-weight: lighter;
+  font-size: 2em;
   div{
     margin-top: 2em;
     span{
       font-size: 1.75em;
     }
     .number-font-match{
-      font-size: 2em;
+      // font-size: 2em;
     }
   }
 }
 .home-title{
   font-size: 4em;
+
 }
 // .home-title:after{
 //   color: white;
@@ -44,4 +48,12 @@ h2{
   right:0;
   position:absolute;
   background-color:rgba(0,0,0,.7)
+}
+.logo{
+  display: block;
+  text-indent: -9999px;
+  // width: 100px;
+  // height: 82px;
+  background: url('../assets/sushi-logo.svg');
+  // background-size: 100px 82px;
 }

@@ -1,15 +1,39 @@
 import React from 'react';
 import Media from "react-media";
+import $ from "jquery";
 
 class Nav extends React.Component {
   constructor(props){
     super(props)
     this.onClickShowHide = this.onClickShowHide.bind(this)
     this.onClickNavigate = this.onClickNavigate.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
     this.state={
-      showNav:false
+      showNav:false,
+      hamburger_alt: false,
     }
   }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(){
+    let height = $('#home').height();
+    if($(window).scrollTop() > height-24){
+      console.log('below');
+      this.setState({hamburger_alt: true})
+    }else{
+      console.log('above');
+      this.setState({hamburger_alt: false})
+    }
+    // console.log(height);
+
+  }
+
   onClickNavigate(e){
     this.setState({showNav:false})
     document.body.style.overflow = "visible";
@@ -31,8 +55,8 @@ class Nav extends React.Component {
           {matches =>
             matches ? (
               <section>
-                <div cassName="nav-toggle" onClick={this.onClickShowHide}>
-                  <i className={`nav-toggle fas fa-3x fa-bars ${this.state.showNav ? 'temp' : null}`}></i>
+                <div className={`nav-toggle ${this.state.hamburger_alt ? 'hamburger-alt' : null}`} onClick={this.onClickShowHide}>
+                  <i className={`nav-toggle fas fa-3x fa-bars ${this.state.showNav ? 'temp' : null} `}></i>
                 </div>
 
                 <section className={`mobile-nav-container ${this.state.showNav ? ' show' : 'hide'}`}>

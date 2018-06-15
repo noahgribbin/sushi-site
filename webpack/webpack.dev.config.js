@@ -6,8 +6,6 @@ const extractSass = new ExtractTextPlugin({
     filename: "main.css"
 });
 require('dotenv').config()
-console.log(__dirname);
-console.log(process.env);
 const config = {
   entry:`${__dirname}/../index.js`,
   output: {
@@ -29,8 +27,14 @@ const config = {
           loader: 'html-loader'
         }
       },
+      // {
+      //   test: /\.svg$/,
+      //   use:{
+      //     loader: 'svg-inline-loader'
+      //   }
+      // },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|svg|otf)$/,
         use: {
           loader: 'file-loader'
         }

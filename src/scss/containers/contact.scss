@@ -1,16 +1,29 @@
 .contact{
   // height: 100vh;
+  padding-top: 1em;
   clear: both;
 }
+.contact-section{
+  text-align: center;
+}
+.contact-title{
+  text-align: center;
+}
 .contact-info{
+  text-align: center;
+  margin: 2em 0 0 0;
   p{
+    font-size: 1.5em;
     margin-top: 1em;
   }
   // height: 30%;
 }
+.address-info{
+  font-weight: bold;
+}
 .contact-container{
   width: calc(100% - 40px);
-  margin: auto;
+  margin: 0 auto 2em auto;
   height: 100%
 }
 .iframe-container{
@@ -21,4 +34,20 @@
 iframe{
   height: 100%;
   width: 100%;
+}
+
+
+@media (min-width: 900px) {
+  .iframe-container{
+    width: 60%;
+    display: inline-block;
+    float: left;
+  }
+  .contact-info{
+    width: 40%;
+    height: 20em;
+    display: inline-block;
+    margin: 5% 0 5% 0;
+    float: right;
+  }
 }
