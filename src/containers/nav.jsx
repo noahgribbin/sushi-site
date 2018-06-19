@@ -11,6 +11,7 @@ class Nav extends React.Component {
     this.state={
       showNav:false,
       hamburger_alt: false,
+      fixed_nav: false,
     }
   }
   componentDidMount() {
@@ -22,16 +23,10 @@ class Nav extends React.Component {
   }
 
   handleScroll(){
-    let height = $('#home').height();
-    if($(window).scrollTop() > height-24){
-      console.log('below');
-      this.setState({hamburger_alt: true})
-    }else{
-      console.log('above');
-      this.setState({hamburger_alt: false})
-    }
-    // console.log(height);
-
+    let homeHeight = $('#home').height();
+    let navHeight = $('.desktop-nav-container').height();
+    $(window).scrollTop() > homeHeight - 30 ? this.setState({hamburger_alt: true}) : this.setState({hamburger_alt: false});
+    $(window).scrollTop() > homeHeight - navHeight ? this.setState({fixed_nav: true}) : this.setState({fixed_nav: false});
   }
 
   onClickNavigate(e){
@@ -71,7 +66,7 @@ class Nav extends React.Component {
                 </section>
               </section>
             ):(
-              <section className="desktop-nav-container">
+              <section className={`desktop-nav-container ${this.state.fixed_nav ? 'fixed-nav' : null}`}>
                   <ul>
                     <li onClick={this.onClickNavigate} link-id="home">Home</li>
                     <li onClick={this.onClickNavigate} link-id="about">About</li>

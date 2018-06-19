@@ -21,10 +21,14 @@
 .desktop-nav-container{
   height: 5em;
   line-height: 5em;
-  width: 100vw;
-  position: fixed;
-  background: #eee;
+  width: 100%;
+  position: absolute;
+  top: calc(100vh - 5em);
+  background: none;
+  color: white;
   z-index: 10;
+  transition: 500ms;
+  transition-property: color, background;
   ul{
     height: 100%;
     text-align: center;
@@ -36,7 +40,14 @@
     }
   }
 }
-
+.fixed-nav{
+  transition-property:color, background;
+  position: fixed;
+  top: 0;
+  // transition: 300ms;
+  color: black;
+  background: rgba(255,255,255, .8);
+}
 .nav-toggle{
   position: fixed;
   top: 20px;
