@@ -58,3 +58,9 @@ h2{
   background: url('../assets/sushi-logo.svg');
   // background-size: 100px 82px;
 }
+
+@media (max-width: 350px) {
+  .home-content-container{
+    font-size: 1.5em;
+  }
+}

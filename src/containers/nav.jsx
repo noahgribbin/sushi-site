@@ -30,7 +30,7 @@ class Nav extends React.Component {
   }
 
   onClickNavigate(e){
-    this.setState({showNav:false})
+    // this.setState({showNav:false})
     document.body.style.overflow = "visible";
     let id = e.target.getAttribute('link-id');
     $('html, body').animate({
@@ -54,7 +54,8 @@ class Nav extends React.Component {
                   <i className={`nav-toggle fas fa-3x fa-bars ${this.state.showNav ? 'temp' : null} `}></i>
                 </div>
 
-                <section className={`mobile-nav-container ${this.state.showNav ? ' show' : 'hide'}`}>
+                <section className={`mobile-nav-container ${this.state.showNav ? ' show' : 'hide'}`}
+                         onClick={this.onClickShowHide}>
                   <section className={`mobile-nav ${this.state.showNav ? 'show' : 'hide'}`}>
                     <ul>
                       <li onClick={this.onClickNavigate} link-id="home">Home</li>
@@ -62,6 +63,7 @@ class Nav extends React.Component {
                       <li onClick={this.onClickNavigate} link-id="menu">Menu</li>
                       <li onClick={this.onClickNavigate} link-id="contact">Contact</li>
                     </ul>
+                    {/* <div className="nav-toggle black"></div> */}
                   </section>
                 </section>
               </section>

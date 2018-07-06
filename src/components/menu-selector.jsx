@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
-import Media from "react-media";
+import Media from 'react-media';
+import $ from 'jquery'
 
 class MenuSelector extends React.Component {
   constructor(props){
@@ -33,7 +34,7 @@ class MenuSelector extends React.Component {
     $('html, body').animate({
       scrollTop: $(`.fake-select`).offset().top - 41.25
     }, 750);
-
+     $(`.menu-selector`).css('z-index', 3000);
     this.setState(prevState => ({
           hideOptions: !prevState.hideOptions
       }));
@@ -43,6 +44,7 @@ class MenuSelector extends React.Component {
 
   onClickShader(){
     document.body.style.overflow = "visible";
+     $(`.menu-selector`).css('z-index', 5);
     this.setState({
       active: this.state.active,
       activeName: this.state.activeName,
@@ -56,7 +58,8 @@ class MenuSelector extends React.Component {
     document.body.style.overflow = "visible";
     var id = e.target.getAttribute('id')
     var name = e.target.getAttribute('name')
-    console.log(name);
+    $(`.menu-selector`).css('z-index', 5);
+
     this.setState({
       active: id,
       activeName: name,
@@ -74,7 +77,6 @@ class MenuSelector extends React.Component {
   }
 
   handleChange(selectedOption){
-    console.log(selectedOption);
     this.setState({ selectedOption });
   }
 
@@ -111,27 +113,6 @@ class MenuSelector extends React.Component {
       )
     })
     return(
-      // <Media query="(max-width: 1200px)">
-      //   {matches =>
-      //     matches ? (
-      //       <section className="menu-selector">
-      //         <div className={`fake-select ${!this.state.hideOptions ? "fake-select-border ": null}`}
-      //              onClick={this.onClickFakeSelect}>
-      //                 <span>{this.state.activeName}</span>
-      //           <i className={`fas fa-caret-down select-box-carret ${!this.state.hideOptions ? "carret-down ": null}`}></i>
-      //         </div>
-      //         <ul className={`fake-option-ul ${this.state.hideOptions ? 'hide' :null} ${!this.state.hideOptions ? "fake-option-border ": null}`}
-      //             onChange={this.onChange}>
-      //           {options}
-      //         </ul>
-      //       </section>
-      //     ):(
-      //       <section className="menu-selector">
-      //         <ul>{items}</ul>
-      //       </section>
-      //     )
-      //   }
-      // </Media>
         <section>
           <div className={`${!this.state.hideOptions ? 'overlay-shader': null} `}
                onClick={this.onClickShader}></div>
