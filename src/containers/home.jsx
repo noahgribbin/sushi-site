@@ -11,8 +11,6 @@ class Home extends React.Component {
             <span className="number-font-match">206.522.4601</span>
           </div>
           <div>
-            {/* <img src={logo}></img> */}
-            {/* <a href="/" className="logo"></a> */}
           </div>
           <div>
             <span>6311 ROOSEVELT WAY NE</span>

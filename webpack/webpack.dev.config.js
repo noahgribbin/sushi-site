@@ -6,10 +6,11 @@ const extractSass = new ExtractTextPlugin({
     filename: "main.css"
 });
 require('dotenv').config()
+console.log('dev', __dirname);
 const config = {
-  entry:`${__dirname}/../index.js`,
+  entry:`${__dirname}/../src/index.js`,
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(`${__dirname}/..`, 'dist'),
     filename: 'bundle.js'
   },
   module: {
@@ -18,7 +19,11 @@ const config = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+           presets: ['env', 'react'],
+           plugins: [require('babel-plugin-transform-object-rest-spread')]
+         }
         }
       },
       {
@@ -54,7 +59,7 @@ const config = {
   },
   plugins: [
     extractSass,
-    new HtmlWebpackPlugin({template: './index.html'}),
+    new HtmlWebpackPlugin({template: './src/index.html'}),
     new webpack.DefinePlugin({
       API_KEY: JSON.stringify(process.env.API_KEY)
     })
