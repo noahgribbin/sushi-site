@@ -30,15 +30,14 @@ class Nav extends React.Component {
   }
 
   onClickNavigate(e){
-    // this.setState({showNav:false})
-    document.body.style.overflow = "visible";
     let id = e.target.getAttribute('link-id');
     $('html, body').animate({
       scrollTop: $(`#${id}`).offset().top
     }, 750);
   }
   onClickShowHide(){
-    document.body.style.overflow === "hidden" ? document.body.style.overflow = "visible" : document.body.style.overflow = "hidden" ;
+    // e.stopPropagation()
+    $(document.body).css('overflow') === "hidden" ? $(document.body).css('overflow', 'visible') : $(document.body).css('overflow', 'hidden');
     this.setState(prevState => ({
       showNav: !prevState.showNav
     }))
@@ -63,7 +62,6 @@ class Nav extends React.Component {
                       <li onClick={this.onClickNavigate} link-id="menu">Menu</li>
                       <li onClick={this.onClickNavigate} link-id="contact">Contact</li>
                     </ul>
-                    {/* <div className="nav-toggle black"></div> */}
                   </section>
                 </section>
               </section>
