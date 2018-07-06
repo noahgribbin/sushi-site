@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --mode development --config webpack/webpack.dev.config.js",
     "ip": "webpack-dev-server --host 172.16.16.185 --mode development --config webpack/webpack.dev.config.js",
+    "postinstall": "npm run build",
     "build": "webpack --config webpack/webpack.dev.config.js --mode=production",
     "start": "node server.js"
   },
@@ -24,6 +25,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "dotenv": "^5.0.1",
+    "express": "^4.16.3",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "fs": "0.0.1-security",
